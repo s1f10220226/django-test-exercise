@@ -22,7 +22,7 @@ class TaskModelTestCase(TestCase):
         self.assertEqual(task.due_at, due)
 
     def test_create_task2(self):
-        task  = Task(title='task2')
+        task = Task(title='task2')
         task.save()
 
         task = Task.objects.get(pk=task.pk)
@@ -47,11 +47,9 @@ class TaskModelTestCase(TestCase):
         self.assertEqual(task.due_at, due)
 
     def test_is_overdue_none(self):
-        task  = Task(title='task3')
+        task = Task(title='task3')
         task.save()
-        
         task = Task.objects.get(pk=task.pk)
-        
         self.assertEqual(task.due_at, None)
 
 
